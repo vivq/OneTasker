@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <title>OneTasker - planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<body>
+
+  <!-- Not-implemented Modal -->
+  <div id="notImpModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container w3-green">
+        <span onclick="document.getElementById('notImpModal').style.display='none'"
+        class="w3-closebtn">&times;</span>
+        <p>This functionality isn't implemented yet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-mobile" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Ukryj &times;</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Login</button>
+    <a href="index.html" class="w3-bar-item w3-button w3-large">Task view</a>
+  </div>
+
+  <!-- Logo bar -->
+  <div class="w3-container w3-green">
+    <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+    <h1>OneTasker - planner </h1>
+  </div>
+
+  <!-- Content -->
+  <div class="w3-row">
+
+    <!-- Todo area -->
+    <div class="w3-half">
+      <h3 class="w3-center"> Current to-do list: </h3>
+      <div class="w3-panel w3-pale-green w3-margin">
+        <p>Type new task</p>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col s9 w3-container">
+          <p>First task</p>
+        </div>
+        <div class="w3-col s3 w3-container w3-right-align">
+          <p>00:00:01</p>
+        </div>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col s9 w3-container">
+          <p>Second task</p>
+        </div>
+        <div class="w3-col s3 w3-container w3-right-align">
+          <p>00:00:01</p>
+        </div>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col s9 w3-container">
+          <p>Third task</p>
+        </div>
+        <div class="w3-col s3 w3-container w3-right-align">
+          <p>00:00:01</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Done area -->
+    <div class="w3-half">
+      <h3 class="w3-center"> All done tasks: </h3>
+
+    </div>
+
+  <!-- Scripts -->
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  function timer1_hide() {
+    document.getElementById("timer1").style.display = "none";
+  }
+  function timer1_show() {
+    document.getElementById("timer1").style.display = "block";
+  }
+  function pop_notImpModal() {
+    document.getElementById('notImpModal').style.display='block'
+  }
+  </script>
+</body>
+</html>

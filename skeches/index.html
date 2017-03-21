@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <title>OneTasker - all tasks but one by one</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<body>
+
+  <!-- Not-implemented Modal -->
+  <div id="notImpModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container w3-green">
+        <span onclick="document.getElementById('notImpModal').style.display='none'"
+        class="w3-closebtn">&times;</span>
+        <p>This functionality isn't implemented yet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left w3-mobile" style="display:none" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Ukryj &times;</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Login</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Start</button>
+    <a href="planner.html" class="w3-bar-item w3-button w3-large">Planner</a>
+    <button class="w3-bar-item w3-button w3-large" onclick="timer1_hide()">Hide time1</button>
+    <button class="w3-bar-item w3-button w3-large" onclick="timer1_show()">Show time1</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Hide time2</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Hide done tasks</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Add task</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Edit times</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Edit blocks</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Edit task</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Help</button>
+    <button class="w3-bar-item w3-button" onclick="pop_notImpModal()">Info</button>
+  </div>
+
+  <!-- Logo bar -->
+  <div class="w3-container w3-green">
+    <span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+    <h1 class="w3-center">OneTasker</h1>
+  </div>
+
+  <!-- Content -->
+  <div class="w3-row">
+    <div class="w3-col w3-white w3-container l2 w3-hide-medium w3-hide-small"></div>
+    <div class="w3-col w3-white w3-container l8 ">
+
+      <!-- Task area -->
+      <div class="w3-row">
+        <div class="w3-col m2 w3-panel w3-hide-small">
+          <button class="w3-button w3-block" onclick="pop_notImpModal()">Done!</button>
+        </div>
+        <div class="w3-col m10 s12 w3-panel w3-pale-green"><p>This is your example task. Do it!</p></div>
+        <div class="w3-col s12 w3-hide-medium w3-hide-large w3-container">
+          <button class="w3-button w3-block" onclick="pop_notImpModal()">Done!</button>
+        </div>
+      </div>
+
+      <!-- Time area -->
+      <div class="w3-row">
+        <div class="w3-col l6 w3-center" id="timer1">
+          <p>
+          Task: <br>
+          00:00:00
+          </p>
+        </div>
+
+        <div class="w3-col l6 w3-center" id="timer2">
+          <p>
+          Block: <br>
+          00:50:00
+          </p>
+        </div>
+      </div>
+
+      <!-- Done tasks area -->
+      <div class="w3-container w3-center w3-text-gray">
+        <h3>Done Tasks:</h3>
+        <ul class="w3-ul" style="text-decoration: line-through;">
+          <li>First task</li>
+          <li>Second task</li>
+          <li>Third task</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="w3-col w3-white w3-container l2 w3-hide-medium w3-hide-small"></div>
+
+  <!-- Scripts -->
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  function timer1_hide() {
+    document.getElementById("timer1").style.display = "none";
+  }
+  function timer1_show() {
+    document.getElementById("timer1").style.display = "block";
+  }
+  function pop_notImpModal() {
+    document.getElementById('notImpModal').style.display='block'
+  }
+  </script>
+</body>
+</html>
